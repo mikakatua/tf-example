@@ -19,10 +19,9 @@ You will need a IAM user account with these minimum permission policies:
 
 Set the enviroment variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_DEFAULT_REGION`
 
-## Deploying the resources
-Edit the `variables.tf` file if you want to customize the AWS components.
-
+## Storing the state remotely
 Follow these steps to store your tfstate file on AWS S3:
+1. Copy `state.tf` to the root folder of your project
 1. Edit `state.tf` and set your bucket, key and DynamoDB table name.
 1. Run `terraform init` to download the provider code and then run `terraform apply` to deploy.
 1. Now, edit again `state.tf` and uncomment the terraform backend section.
