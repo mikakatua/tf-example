@@ -1,4 +1,4 @@
 output "alb_dns_name" {
   value       = module.alb.dns_name
-  description = "The domain name of the load balancer"
+  description = "Load balancer DNS name"
 }

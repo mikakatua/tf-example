@@ -16,6 +16,7 @@ You will need a IAM user account with these minimum permission policies:
 - AmazonEC2FullAccess
 - AmazonS3FullAccess
 - AmazonDynamoDBFullAccess
+- AmazonRDSFullAccess
 
 Set the enviroment variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_DEFAULT_REGION`
 

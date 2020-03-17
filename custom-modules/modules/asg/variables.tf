@@ -30,17 +30,32 @@ variable "public_key_path" {
   default = "~/.ssh/id_rsa.pub"
 }
 
-variable "instance_ami" {
-  description = "AMI for aws EC2 instance"
-  default = "ami-0e38b48473ea57778" # Amazon Linux 2 AMI
-}
-
-variable "instance_type" {
-  description = "type for aws EC2 instance"
-  default = "t2.micro"
-}
-
 variable "server_port" {
   description = "The port the server will use for HTTP requests"
   type        = number
+}
+
+variable "database_host" {
+  description = "Hostname of the RDS instance"
+  type        = string
+}
+
+variable "database_port" {
+  description = "Database port"
+  type        = string
+}
+
+variable "database_name" {
+  description = "Database name"
+  type        = string
+}
+
+variable "database_user" {
+  description = "Master username for the database"
+  type        = string
+}
+
+variable "database_pass" {
+  description = "Database master password"
+  type        = string
 }

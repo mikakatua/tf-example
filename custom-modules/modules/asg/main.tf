@@ -1,4 +1,6 @@
 locals {
+  instance_ami = "ami-0e38b48473ea57778" # Amazon Linux 2 AMI
+  instance_type = "t2.micro"
   min_instances = 2
   max_instances = 10
 }
@@ -9,13 +11,17 @@ data "template_file" "user_data" {
   template = file("${path.module}/user-data.sh")
 
   vars = {
-    server_port = var.server_port
+    dbhost = var.database_host
+    dbport = var.database_port
+    dbuser = var.database_user
+    dbpass = var.database_pass
+    dbname = var.database_name
   }
 }
 
 resource "aws_launch_configuration" "example" {
-  image_id        = var.instance_ami
-  instance_type   = var.instance_type
+  image_id        = local.instance_ami
+  instance_type   = local.instance_type
   security_groups = [aws_security_group.sg_instance.id]
   key_name = aws_key_pair.ec2key.key_name
 

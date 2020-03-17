@@ -21,17 +21,17 @@ variable "server_port" {
 
 variable "cidr_vpc" {
   description = "CIDR block for the VPC"
-  default = "172.16.0.0/16"
+  default = "10.0.0.0/16"
 }
 
 variable "cidr_private_subnets" {
   description = "CIDR block for the private subnets"
-  default = ["172.16.10.0/24", "172.16.11.0/24"]
+  default = ["10.0.1.0/24", "10.0.2.0/24"]
 }
 
 variable "cidr_public_subnets" {
   description = "CIDR block for the public subnets"
-  default = ["172.16.20.0/24", "172.16.21.0/24"]
+  default = ["10.0.101.0/24", "10.0.102.0/24"]
 }
 
 variable "create_nat_gateway" {
