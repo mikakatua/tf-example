@@ -37,3 +37,5 @@ If you ever wanted to delete the resources, you’d have to do the reverse proce
 1. Edit `state.tf` and comment the terraform backend section.
 1. Run `terraform init` to copy the Terraform state back to your local disk.
 1. Run `terraform destroy` to delete all the resources.
+
+If you get the `BucketNotEmpty` error, you must delete all the contents and versions in the bucket.
