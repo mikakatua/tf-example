@@ -66,6 +66,5 @@ module "rds" {
 
 resource "random_password" "dbpass" {
   length = 16
-  special = true
-  override_special = "_%@"
+  special = false
 }
