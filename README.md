@@ -8,6 +8,11 @@ This example creates the following AWS components:
 - Application Load Balancer
 - Auto Scaling Group
 - 2 EC2 instances* (with a simple HTTP test program)
+- RDS database
+
+Additionally, if you store the Terraform state file remotely, it will also create:
+- S3 bucket
+- DynamoDB table
 
 (\*) If you are using the AWS Free Tier, you will be limited to 1 EC2 instances. Open a support case to request increase this limit.
 
