@@ -23,7 +23,7 @@ You will need a IAM user account with these minimum permission policies:
 - AmazonDynamoDBFullAccess
 - AmazonRDSFullAccess
 
-Set the enviroment variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_DEFAULT_REGION`
+Set your AWS enviroment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN` and `AWS_DEFAULT_REGION`
 
 ## Storing the state remotely
 Follow these steps to store your tfstate file on AWS S3:
